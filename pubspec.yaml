@@ -37,6 +37,19 @@ flutter:
 
   assets:
     - logo.png
+    - mcqueen.png
+    - mcqueen.gif
+    - mate.png
+    - mate.gif
+    - fillmore.png
+    - fillmore.gif
+    - luigi.png
+    - luigi.gif
+    - sally.png
+    - sally.gif
+    - hudson.png
+    - hudson.gif
+    - fundo.jpg
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
