@@ -17,8 +17,10 @@ class _CarrosScreenState extends State<CarrosScreen> {
             appBar: PreferredSize(
               preferredSize: Size.fromHeight(40.0),
               child:AppBar(
-                backgroundColor: Color.fromRGBO(0,191,255,0.3),
+                backgroundColor: Color.fromRGBO(0,0,0,0.9),
                 title: Text("Selecione seu carro favorito!"),
+                centerTitle: true,
+                
               ),
             ),
             body: FutureBuilder<List<CarroModel>>(
@@ -50,27 +52,64 @@ Stack buildListView(List<CarroModel> carros){
             fit:BoxFit.cover,
             colorBlendMode: BlendMode.darken,
           ),
-          ListView.builder(
-            itemCount: carros == null ? 0 : carros.length,
-            itemBuilder: (BuildContext context, int index){
-              return cardCarro(carros[index]);
-            },
+          Container(
+              height: MediaQuery.of(context).size.height,
+              padding: EdgeInsets.all(40.0),
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(color: Color.fromRGBO(78, 86, 106, .6)),
+              child: Center(
+                child: ListView.builder(
+                        itemCount: carros == null ? 0 : carros.length,                    
+                        itemBuilder: (BuildContext context, int index){
+                          return cardCarro(carros[index]);
+                        },
+                ),
+              ),
           )]
         );
 }
 
 Card cardCarro(CarroModel carro){
   return Card(
+    color: Color.fromRGBO(carro.r,carro.g,carro.b,.3 ),
     clipBehavior: Clip.antiAlias,
     shape:RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(10.0)
+      borderRadius: BorderRadius.circular(10.0),
+      
     ),
     elevation: 12.0,
-    margin:new EdgeInsets.symmetric(
-      horizontal: 12.0,
-      vertical: 6.0,
+    
+    child: Column(
+      children: <Widget>[
+        SizedBox(height: 20.0),
+        ListTile(  
+          leading:  Image.asset(
+                          "${carro.imgCaminho}.png",
+                          width: 100.0,
+                          height: 100.0,
+                        ),   
+          title: Text(
+                  carro.nome,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                  
+          onTap: (){
+              Navigator.pushNamed(
+                context,
+              "/carro_detalhes",
+                arguments: carro);
+            },
+        ),
+         SizedBox(height: 20.0),
+      ],
     ),
-    child: Container(
+   
+    
+     
+       /*Container(
       decoration: BoxDecoration(
         color: Color.fromRGBO(carro.r,carro.g,carro.b,carro.o),
         image: DecorationImage(
@@ -98,7 +137,7 @@ Card cardCarro(CarroModel carro){
             arguments: carro);
         },
       ),
-    ),
+    ),*/
   );
 
   }

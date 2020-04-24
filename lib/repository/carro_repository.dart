@@ -38,7 +38,7 @@ class CarroRepository{
           nome: 'Tom Mate',
           apelido: 'Carro do meu pai',
           descricao: 'É o alivio comico do filme. Caipirão meio burro mas de bom coração, ajuda o' +
-          'relãmpago marquinhos a se tornar uma pessoa(carro) melhor \n'+
+          'relâmpago marquinhos a se tornar uma pessoa(carro) melhor \n'+
           'NOTA: Os dubladores brasileiros foram geniais no trocadilho',
           pesoParaTrama: 4,
           marca: "Não possui, de tão velho",
@@ -55,7 +55,7 @@ class CarroRepository{
           id:3,
           nome: 'Fillmore',
           apelido: 'Kombi 4H20',
-          descricao: 'Faz uso pesado de narcóricos e entorpecentes. É vegano, vegetariano, narulista'+
+          descricao: 'Faz uso pesado de narcóricos e entorpecentes. É vegano, vegetariano, naturalista'+
           ',provavelmente toca ukulele e bebe starbucks',
           pesoParaTrama: 2,
           marca: "Volkswagen Komb",
@@ -89,7 +89,7 @@ class CarroRepository{
           id:4,
           nome: 'Doc Hudson',
           apelido: 'Documento de world',
-          descricao: 'Era um ótimo corredor no seu tempo, até que bate e se cagou inteiro.'+
+          descricao: 'Era um ótimo corredor no seu tempo, até que bateu e fico inútil.'+
           'Serve como modelo paterno para o marquinho e o ensina a dar drift melhor que o japa do velozes'+
           'e Furiozos Desafio em Tokyo.',
           pesoParaTrama: 3,
